@@ -55,11 +55,9 @@ myFocusedBorderColor = "#00ff00"
 --
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
-    -- launch a terminal
-    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
-
+    [ 
     -- close focused window
-    , ((modm .|. shiftMask, xK_c     ), kill)
+    ((modm .|. shiftMask, xK_c     ), kill)
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
@@ -111,9 +109,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- See also the statusBar function from Hooks.DynamicLog.
     --
     , ((modm              , xK_b     ), sendMessage ToggleStruts)
-
-    -- Quit xmonad
-    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
 
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
@@ -203,7 +198,7 @@ myManageHook = composeAll
     , className =? "Gimp"           --> doFloat
     , className =? "Xfce4-appfinder"        --> doFloat
     , className =? "Xfdesktop"        --> doIgnore
-    , className =? "xfce4-popup-whiskermenu"        --> doIgnore
+    , title     =? "Whisker Menu"        --> doFloat
     , className =? "Xmessage"        --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ] 

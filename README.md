@@ -9,22 +9,18 @@ There are some issues with this desktop which I hope can be fixed.They are:
 
 - After switching WMs you lose windows outside of the current desktop
 - The switch can get janky at times,especially if you do it often without logging out.
-- In tiling mode, the whiskermenu is treated like a regular window ,and leaving tiling mode results in the menu being glitched in a simmilar manner.
 - WM-independent keybinds (like launching a terminal) are supposed to be managed by the XFCE session, so they aren't included in the xmonad config to avoid conflincts.
 
-Because of these issues I don't advise using this as your daily driver ,untill all issues (known and unknown) get solved.Anyone with the knowledge to fix these issues is welcome to create a PR.
+Because of these issues I don't advise using this as your daily driver ,until all issues (known and unknown) get solved.Anyone with the knowledge to fix these issues is welcome to create a PR.
 
 ## Installation
 
-I intend on creating an easy-to-use installation script, that installs everything for you, and would work regardless of the distro.  
-For now, to install the deskotp you need to:
+```sh
+git clone https://github.com/document10/xfce4-tiling-mode/
+cd xfce4-tiling-mode
+sh install.sh
+```
 
-- Import the `xfce4-tiling-mode-panel.tar.bz2` using the [XFCE Panel Proiles](https://docs.xfce.org/apps/xfce4-panel-profiles/start) app.
-- Copy the `xmonad` folder of your home folder ,rename it as `.xmonad` and run `xmonad --recompile`
-- Copy all contents of the `config` folder in the `.config` folder of your home folder
-- Copy the `switch.sh` script inside your home folder.
-
-This process needs to be done for all the users you want to have access to this desktop.  
 Optionally you can add a keybinding inside XFCE Settings for `sh ~/switch.sh` to trigger the switch using keyboard.You can also set the script to run on startup to instantly drop to the tiling layout.
 
 ## Required packages
