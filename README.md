@@ -1,7 +1,11 @@
-# xfce4-tiling-mode
+# Desktop tiler toolkit
 
-This repository is a collection of configs and scripts to add ondemand tiling functionality for your XFCE desktop.It uses Xmonad for tiling mode and xfwm4 for the regular mode.Simply press a button on the panel to activate it.  
+This repository is a collection of configs and scripts to add ondemand tiling functionality for multiple desktop environments(for now only XFCE and MATE are supported).Simply press a button on the panel to activate it.  
 [How the desktop works](https://imgur.com/gallery/LZEiIZW)  
+
+## How it works
+
+The main switch.sh script switches from a selected WM as the "Default WM" for the session to a highly specialised Xmonad config,alongside picom for compositing.
 
 ## Known issues
 
