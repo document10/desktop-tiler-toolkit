@@ -17,16 +17,6 @@ There are some issues with this desktop which I hope can be fixed.They are:
 
 Because of these issues I don't advise using this as your daily driver ,until all issues (known and unknown) get solved.Anyone with the knowledge to fix these issues is welcome to create a PR.
 
-## Installation
-
-```sh
-git clone https://github.com/document10/xfce4-tiling-mode/
-cd xfce4-tiling-mode
-sh install.sh
-```
-
-Optionally you can add a keybinding inside XFCE Settings for `sh ~/switch.sh` to trigger the switch using keyboard.You can also set the script to run on startup to instantly drop to the tiling layout.
-
 ## Required packages
 
 - xfce4
