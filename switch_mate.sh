@@ -1,9 +1,7 @@
 #!/bin/bash
-
-output=$(pidof xfwm4)
-
+output=$(pidof marco)
 if [ -n "$output" ]; then
-  killall xfwm4
+  killall marco
   killall plank 
   xmonad --recompile
   xmonad --replace &
@@ -12,6 +10,6 @@ if [ -n "$output" ]; then
 else
   killall ~/.xmonad/xmonad-x86_64-linux
   killall picom
-  xfwm4 --replace &
+  marco --replace &
   plank &
 fi

@@ -1,18 +1,33 @@
 # Desktop tiler toolkit
 
-This repository is a collection of configs and scripts to add ondemand tiling functionality for multiple desktop environments(for now only XFCE and MATE are supported).Simply press a button on the panel to activate it.  
+This repository is a collection of configs and scripts to add ondemand tiling functionality for multiple desktop environments(for now only XFCE and MATE are tested).
 [How the desktop works](https://imgur.com/gallery/LZEiIZW)  
+
 
 ## How it works
 
 The main switch.sh script switches from a selected WM as the "Default WM" for the session to a highly specialised Xmonad config,alongside picom for compositing.  
 The script is executed in the following way:
 
-```
-sh switch.sh [DEFAULTWM]
+```sh
+sh switch.sh
 ```
 
-Replace `[DEFAULTWM]` with the default window manager the desktop environment uses,or another window manager of your choice.Additionally add `0` to use a more lightweight config for picom,if you're having problems.
+## Installation
+
+1. Run the `install.sh` script included in the repo:
+
+```sh
+git clone https://github.com/document10/desktop-tiler-toolkit
+cd desktop-tiler-toolkit
+sh install.sh [DE]
+```
+
+Replace DE with one of the supported desktop environments (`xfce4` or `mate`,case sensitive).Running the script with no arguments will also tell you what DEs are supported.
+
+2. Assign the command `sh switch_xfce4.sh` or `sh switch_mate.sh` (depending on yor DE) to a panel button or a keyboard shortcut of your choice.
+
+3. Add `plank` to the session autostart.
 
 ## Known issues
 
@@ -31,4 +46,4 @@ Because of these issues I don't advise using this as your daily driver ,until al
 - xmonad
 - xmonad-contrib
 
-To install these ,look up the package names and the installation commands for your distro.It's recommended to have these packages installed **BEFORE** running any of the steps above.So far I only tested this on Endeavour OS but more testinq will be done soon.
+To install these ,look up the package names and the installation commands for your distro.It's recommended to have these packages installed **BEFORE** running any of the steps above.So far I only tested this on Endeavour OS (Arch) but more testing will be done soon.
